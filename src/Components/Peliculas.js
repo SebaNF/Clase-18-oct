@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { simpleGet } from '../Services/simpleGet';
+import { simpleGet } from '../Services/peliculasServices';
 import { Link } from 'react-router-dom'; 
 
 
@@ -25,7 +25,7 @@ const Peliculas = () => {
         <div>
             <h1>Listado de peliculas uwu</h1>
             <ul>
-               {peliculas?.map((pelicula)=><li key={pelicula.id} ><Link to={`/${pelicula.id}`}>{pelicula.title}</Link> </li>) }
+                {peliculas?.map((pelicula)=><li key={pelicula.id} ><Link to={`/pelicula/${pelicula.id}`}>{pelicula.title}</Link> </li>) }
             </ul>
         </div>
     );
